@@ -7,7 +7,7 @@ import os
 
 def ingest_csv_to_chroma(csv_path):
     messages = []
-    local_embeddings = OllamaEmbeddings(model=os.environ.get("LLM_VERSION"))
+    local_embeddings = OllamaEmbeddings(model='llama3.1:8b')
     persist_directory = "db-intents"
     
     if os.path.exists(persist_directory):
